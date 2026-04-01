@@ -14,8 +14,8 @@ class View(ft.UserControl):
         # graphical elements
         self._title = None
 
-        self.ddPD = None
-        self.ddCodins = None
+        self.ddPD = None  # dd: drop down -> menu a tendina
+        self.ddCodins = None  # codice insegnamento
         self.btnPrintCorsiPD = None
         self.btnPrintIscrittiCorsiPD = None
         self.btnPrintIscrittiCodins = None
@@ -40,8 +40,8 @@ class View(ft.UserControl):
 
         row1 = ft.Row([self.ddPD, self.btnPrintCorsiPD, self.btnPrintIscrittiCorsiPD])
 
-        self.ddCodins = ft.Dropdown(label = "Corso", width=200)
-        self._controller.fillddCodins()
+        self.ddCodins = ft.Dropdown(label = "Corso", width=200)   # sarà il controller a riempire questo drop down, noi non scriviamo nulla
+        self._controller.fillddCodins()   #  metodo nel controller che lo riempie
         self.btnPrintIscrittiCodins = ft.ElevatedButton(text = "Stampa iscritti al corso",
                                                         on_click = self._controller.handlePrintIscrittiCodins,
                                                  width=300)

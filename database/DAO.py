@@ -23,6 +23,7 @@ class DAO():
         cnx.close()
         return res
 
+    """ Meglio appendere l'oggetto Corso dal momento che ci servirà in seguito, piuttosto che la stringa codins"""
     @staticmethod
     def getAllCorsi():
         cnx = DBConnect.get_connection()
