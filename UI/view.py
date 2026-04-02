@@ -38,7 +38,7 @@ class View(ft.UserControl):
                                                  on_click=self._controller.handlePrintIscrittiCorsiPD,
                                                  width=300)
 
-        row1 = ft.Row([self.ddPD, self.btnPrintCorsiPD, self.btnPrintIscrittiCorsiPD])
+        row1 = ft.Row([self.ddPD, self.btnPrintCorsiPD, self.btnPrintIscrittiCorsiPD], alignment=ft.MainAxisAlignment.CENTER)
 
         self.ddCodins = ft.Dropdown(label = "Corso", width=200)   # sarà il controller a riempire questo drop down, noi non scriviamo nulla
         self._controller.fillddCodins()   #  metodo nel controller che lo riempie
@@ -49,7 +49,7 @@ class View(ft.UserControl):
                                                    on_click = self._controller.handlePrintCDSCodins,
                                                  width=300)
 
-        row2 = ft.Row([self.ddCodins, self.btnPrintIscrittiCodins, self.btnPrintCDSCodins])
+        row2 = ft.Row([self.ddCodins, self.btnPrintIscrittiCodins, self.btnPrintCDSCodins], alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row1, row2)
 
         # List View where the reply is printed
